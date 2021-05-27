@@ -1,0 +1,57 @@
+place_agency_landlines
+    use place_agency($location, $number, $agency)
+    when
+        facts.hotline($region, $number, $agency)
+        facts.region($location, $region)
+        
+place_agency_specific
+    use place_specific($location, $number, $agency)
+    when
+        facts.hotline($location, $number, $agency)
+        
+place_agency_all_landlines
+    use place_agency_all_location($location, $number, $agency)
+    when
+        facts.hotline($location, $number, $agency)
+        
+plan_action_label
+    use plan_action($label, $action)
+    when
+        facts.action($label, $action)
+        
+place_evac
+    use place_evac_region($city, $center)
+    when
+        facts.evac_area($city, $center)
+    
+place_region
+    use place_region($place, $region)
+    when
+        facts.region($place, $region)
+        
+place_quotes
+    use place_inspirational_quotes($num, $q)
+    when
+        facts.quote($num, $q)
+        
+place_org
+    use place_org($location, $org)
+    when
+        facts.org($region, $org)
+        facts.region($location, $region)
+        
+get_action
+    use get_action_suggest($word, $update)
+    when
+        facts.suggest($word, $update)
+        
+place_situation
+    use place_situation($signal, $situation)
+    when
+        facts.situational($signal, $situation)
+        
+place_coords
+    use place_coords($lat, $long, $city)
+    when
+        facts.coords($lat, $long, $city)
+
