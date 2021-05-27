@@ -1,7 +1,7 @@
 #matplotlib==3.3.2
 aiohttp==3.7.4
 alabaster==0.7.12
-anaconda-client==1.7.2
+#anaconda-client==1.7.2
 anaconda-navigator==2.0.3
 anaconda-project==0.8.3
 anvil-uplink==0.3.36
